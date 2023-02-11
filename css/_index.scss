@@ -1,3 +1,154 @@
+container {
+    width: 90%;
+    margin: auto;
+}
+
+#header {
+
+
+    .logo {
+        width: 15%;
+
+    }
+
+    .nav-menu {
+
+        width: 80%;
+
+        li {
+
+            list-style: none;
+
+
+            a {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                display: inline-block;
+                font-weight: bold;
+                position: relative;
+                padding: 25px;
+
+
+                &::after {
+                    content: "";
+                    display: block;
+                    border-top: 1px solid #dfba9f;
+                    border-color: #dfba9f;
+                    border-color: var(--main);
+                    position: absolute;
+                    width: 0;
+                    right: 0;
+                    top: 10px;
+                    transition: width .5s;
+
+                    &:hover {
+                        width: 100%;
+                    }
+                }
+
+               
+
+                &:hover{
+                    i{
+                        transform: rotate(90deg);
+                    }
+                }
+
+                &:hover {
+                    color: #DBB295;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+
+            &.about {
+                position: relative;
+
+                &:hover {
+                    .about-dropped {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                .about-dropped {
+                    top: 100%;
+                    left: 0%;
+                    position: absolute;
+                    background-color: white;
+                    transition: 0.5s ease-in-out;
+                    width: 250px;
+                    opacity: 0;
+                    visibility: hidden;
+
+                    li {
+
+                        &:hover {
+                            background-color: #DFBA9F;
+                            padding-right: 40px;
+                            transition: 0.5s ease-in-out;
+
+                        }
+                        a {
+                            padding: 10px 25px;
+                        }
+                    }
+
+                }
+            }
+
+            &.products{
+                position: relative;
+
+                &:hover {
+                    .products-dropped {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                .products-dropped {
+                    top: 100%;
+                    left: 0%;
+                    position: absolute;
+                    background-color: white;
+                    transition: 0.5s ease-in-out;
+                    width: 250px;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 999;
+
+                    li {
+
+                        padding: 3px 5px;
+                        margin: 0 5px;
+
+                        &:hover {
+                            background-color: #DFBA9F;
+                            padding-right: 40px;
+                            transition: 0.5s ease-in-out;
+
+                        }
+
+                        a {
+                            padding: 10px 25px;
+                            color: black;
+
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .second {
+        display: flex;
+    }
+}
+
+
+
 #start {
     .make {
         width: 100%;
@@ -1735,7 +1886,95 @@
 }
 
 
+#footer {
+    background-color: #141414;
 
+    .end {
+
+
+        .top {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                color: #DFBA9F;
+                font-family: 'Mrs Saint Delafield', cursive;
+            }
+
+            .input {
+                margin-left: 60px;
+
+                input {
+                    padding: 15px 80px;
+                }
+            }
+
+            span {
+                background-color: #DBB295;
+                padding: 18px 40px;
+            }
+        }
+    }
+
+    hr {
+        color: #DBB295;
+    }
+
+    .middle {
+        display: flex;
+        width: 100%;
+        margin: 70px 20px;
+
+        .box {
+            width: 33.333%;
+
+            img {
+                margin-bottom: 30px;
+            }
+
+            span {
+                font-size: 15px;
+                color: #cdc6c0;
+            }
+
+            i {
+                padding-right: 8px;
+                color: #DBB295;
+            }
+
+            h1 {
+                font-family: 'Times New Roman', Times, serif;
+                color: #DBB295;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    list-style: none;
+                    width: 50%;
+                }
+            }
+
+        }
+    }
+
+    .bottom {
+        padding: 30px 0;
+        text-align: center;
+
+        span {
+            color: #DBB295;
+        }
+    }
+}
 
 
 
@@ -1766,6 +2005,7 @@
                     p {
                         font-size: 13px;
                     }
+
                     a {
                         &::after {
                             content: '';
@@ -1851,9 +2091,10 @@
             p {
                 width: 100%;
             }
-            img{
-                    position: absolute;
-                    left: 25%; 
+
+            img {
+                position: absolute;
+                left: 25%;
             }
         }
 
@@ -2031,17 +2272,19 @@
                     }
                 }
             }
-            .more { 
+
+            .more {
                 position: absolute;
                 top: 100%;
                 left: 16%;
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                width: 25%;
-                                left: 4%;
-                            }
-                        }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 25%;
+                    left: 4%;
+                }
+            }
         }
     }
 
@@ -2180,11 +2423,13 @@
             .photo-two {
                 position: relative;
                 margin-bottom: 200px;
+
                 &:hover {
                     &::after {
                         height: 33vh;
                         opacity: 1;
                     }
+
                     .overlay1 {
                         height: 33vh;
                     }
@@ -2200,6 +2445,7 @@
                         height: 33vh;
                         opacity: 1;
                     }
+
                     .overlay1 {
                         height: 33vh;
                         opacity: 1;
@@ -2215,9 +2461,102 @@
 
             .season {
                 height: 25vh;
-margin-bottom: 230px;
+                margin-bottom: 230px;
             }
         }
     }
+
     // fashion responsive end 
+
+
+
+    #footer {
+        background-color: #141414;
+
+        .end {
+
+
+            .top {
+                padding: 40px;
+                display: flex;
+                justify-content: center;
+
+                h1 {
+                    color: #DFBA9F;
+                    font-family: 'Mrs Saint Delafield', cursive;
+                }
+
+                .input {
+                    margin-left: 60px;
+
+                    input {
+                        padding: 15px 80px;
+                    }
+                }
+
+                span {
+                    background-color: #DBB295;
+                    padding: 18px 40px;
+                }
+            }
+        }
+
+        hr {
+            color: #DBB295;
+        }
+
+        .middle {
+            display: flex;
+            width: 100%;
+            margin: 70px 20px;
+
+            .box {
+                width: 33.333%;
+
+                img {
+                    margin-bottom: 30px;
+                }
+
+                span {
+                    font-size: 15px;
+                    color: #cdc6c0;
+                }
+
+                i {
+                    padding-right: 8px;
+                    color: #DBB295;
+                }
+
+                h1 {
+                    font-family: 'Times New Roman', Times, serif;
+                    color: #DBB295;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        list-style: none;
+                        width: 50%;
+                    }
+                }
+
+            }
+        }
+
+        .bottom {
+            padding: 30px 0;
+            text-align: center;
+
+            span {
+                color: #DBB295;
+            }
+        }
+    }
 }
